@@ -147,6 +147,17 @@ a:active {
     border-bottom: 1px solid transparent;
 }
 
+.row12 a {
+    transition: none;
+    color:#fff;
+    
+    
+    margin-top: 10px;
+    margin-left: 0;
+    margin-right: 0;
+   
+}
+
 /* ----- BUTTONS ----- */
 .btn:link,
 .btn:visited,
@@ -295,7 +306,8 @@ header {
 /* ----------------------------------------------- */
 
 .section-features .long-copy {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
+    
 }
 
 
@@ -565,7 +577,7 @@ footer {
 
 .ion-social-facebook,
 .ion-social-twitter,
-.ion-social-googleplus,
+.fab fa-linkedin,
 .ion-social-instagram {
     -webkit-transition: color 0.2s;
     transition: color 0.2s;
@@ -579,7 +591,7 @@ footer {
     color: #00aced;
 }
 
-.ion-social-googleplus:hover {
+.fab fa-linkedin:hover {
     color: #dd4b39;
 }
 
@@ -640,17 +652,22 @@ i{
 }
 
 .push-button {
-    display: inline-block;
-    padding: 10px 30px;
-    font-weight: 300;
+    
+}
+
+.row12 {
+    display:inline-block;
+    padding: 1px 5px;
     text-decoration: none;
-    border-radius: 200px;
+    border-radius: 100px;
     background-color: #e67e22;
     border: 1px solid #e67e22;
     color: rgb(255, 255, 255);
     margin-right: 15px;
-    float:none;
     
+    
+    margin: 50% ;
+   
 }
 
 

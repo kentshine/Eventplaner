@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Event portal of Boston School.">
+        <meta name="description" content="Event portal of Liberty University.">
 
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/vendors/css/normalize.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/vendors/css/grid.css') }}">
@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="{{ url_for('static' , filename = 'styles/resources/css/queries.css') }}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <title>BostonEdPortal</title>
+        <title>LibertyEdPortal</title>
 
 
     </head>
@@ -25,7 +25,7 @@
         <header>
             <nav>
                 <div class="row">
-                    <img src="static\styles\resources\img\Pngitem_833749.png" alt="Boston logo" class="logo">
+                    <img src="static\styles\resources\img\Pngitem_833749.png" alt="Liberty logo" class="logo">
 
                     <ul class="main-nav js--main-nav">
                         <li><a href="#features">About</a></li>
@@ -78,12 +78,16 @@
             </div>
             {% for page_num in events.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
             {% if events.page == page_num %}
+              <div class="row12">
                 <a  href="#"   class="push-button">{{ page_num }}</a>
+            </div>
             {% else %}
+           <div class="row12">
                 <a   href="{{ url_for('core.home',page=page_num) }}" class="push-button">{{ page_num}}</a>
+                </div>
             {% endif %}
             {% endfor %}
-
+        
         </section>
 
 
@@ -121,7 +125,7 @@
                         <li><a href="#">About us</a></li>
                         <li><a href="#">Blog</a></li>
                         <li><a href="#">Press</a></li>
-                        <li><a href="#">iOS App</a></li>
+                        <li><a href="#">iOS App</a></li>                                 
                         <li><a href="#">Android App</a></li>
                     </ul>
                 </div>
@@ -129,14 +133,14 @@
                     <ul class="social-links">
                         <li><a href="#"><i class="ion-social-facebook"></i></a></li>
                         <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-                        <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
                         <li><a href="#"><i class="ion-social-instagram"></i></a></li>
                     </ul>
                 </div>
             </div>
             <div class="row">
                 <p>
-                    Copyright &copy; 2021 by BostonEdPortal. All rights reserved.
+                    Copyright &copy; 2021 by LibertyUniversityEdPortal. All rights reserved.
                 </p>
             </div>
         </footer>
