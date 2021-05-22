@@ -8,6 +8,7 @@ Orange color: #e67e22
 /* BASIC SETUP */
 /* ----------------------------------------------- */
 
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Pattaya&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -16,13 +17,14 @@ Orange color: #e67e22
 
 html,
 body {
-    background-color: #fff;
     color: #555;
-    font-family: 'Lato', 'Arial', sans-serif;
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+    background: url(img/log-background.jpg) no-repeat center/cover;
+    height: 100vh;
 }
 
 .clearfix {zoom: 1;}
@@ -206,9 +208,9 @@ header {
 }
 
 .hero-text-box {
-    position: absolute;
+    position: relative;
     width: 1140px;
-    top: 50%;
+    top: 40%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -216,9 +218,10 @@ header {
 }
 
 .logo {
-    height: 100px;
+    height: 75px;
     width: auto;
-    float: left;
+    float: none;
+    margin-left: -200px;
     margin-top: 20px;
 }
 
@@ -644,10 +647,29 @@ i{
     border-radius: 200px;
     background-color: #e67e22;
     border: 1px solid #e67e22;
-    color: rgb(131, 209, 28);
+    color: rgb(255, 255, 255);
     margin-right: 15px;
     float:none;
-    transition: none;
+    
 }
 
 
+.box1 {
+   
+    padding: 10px 30px;
+    margin-top: 400px;
+    margin-left: 785px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.row1 {
+    margin-top: 300px;
+}
+
+.btn11 {
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    font-weight: 50;
+    border-radius: 200px;
+}
