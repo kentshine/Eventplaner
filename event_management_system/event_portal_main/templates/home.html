@@ -78,9 +78,9 @@
             </div>
             {% for page_num in events.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
             {% if events.page == page_num %}
-                <a align=center href="#"   class="push-button">{{ page_num }}</a>
+                <a  href="#"   class="push-button">{{ page_num }}</a>
             {% else %}
-                <a align=center  href="{{ url_for('core.home',page=page_num) }}" class="push-button">{{ page_num}}</a>
+                <a   href="{{ url_for('core.home',page=page_num) }}" class="push-button">{{ page_num}}</a>
             {% endif %}
             {% endfor %}
 
