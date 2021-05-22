@@ -1,0 +1,201 @@
+/*Must to include*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+ 
+html{
+    font-size: 62.5%;
+}
+
+/*Initial assigned properties*/
+
+html,body{
+    background-color: #fff;
+    color: #556;
+    font-weight: 300;
+    font-family:Arial, Helvetica, sans-serifS;
+    text-rendering: optimizeLegibility;
+}
+
+.clearfix{
+    clear: both;
+}
+
+h1{
+    font-size: 4rem;
+    font-family: font-family: 'Source Sans Pro', sans-serif;
+}
+
+h2{
+    font-size: 7rem;
+    padding: 5rem 0rem;
+}
+
+h3{
+    font-size: 5rem;
+}
+
+h4{
+    font-size: 1.5rem;
+}
+
+a{
+    text-decoration: none;
+    font-size: 2rem;
+    font-family:Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+}
+
+p{
+    font-size: 2.5rem;
+}   
+
+/*Navigation bar details*/
+
+header{
+    background-image:url(/speech.png);
+    background-position: center;
+    background-size: cover;
+    height: 55rem;
+}
+
+
+.liberty-logo{
+    width: 20rem;
+    margin-left: 10rem;
+    margin-top: 1rem;
+}
+
+.nav-class{
+    float: right;
+    margin-right: .2rem;
+    list-style: none;
+    font-weight: 600;
+}
+
+.nav-class li{
+    display: inline-block;
+    margin: 2rem;
+    text-transform:capitalize;
+}
+
+header h1{
+    text-align: center;
+    margin-left: -60rem;
+    margin-top: 4   rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 20rem;
+    font-weight: 800;
+    text-shadow: 3px 3px 3px black;
+}
+
+/*Event details*/
+
+.detail-class h2{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-top: 3rem;
+    color: black;
+}
+
+.detail-class h4{
+    margin-left: 3rem;
+    letter-spacing: .1rem;
+}
+
+.detail-class p{
+    margin-top: 3rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+/*Event Outcomes*/
+
+.outcome-class{
+    background-color: #ffffcc;
+    position: relative;
+}
+
+.outcome-class h2{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 10rem;
+    color: black;
+}
+
+/*outcome tables*/
+
+.tab1-class,.tab2-class,.tab3-class{
+    width: 40rem;
+}
+
+.tab1-class,.tab2-class,.tab3-class h3{
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+
+.tab1-class{
+    background-color: cornflowerblue;
+    position: absolute;
+    top: 40%;
+    right:3%;
+}
+
+.tab2-class{
+    background-color: #00cc66;
+    margin-bottom: 5rem;
+    margin-left: 2.5rem;
+    position: relative;
+    top:-7rem;
+}
+
+.tab3-class{
+    background-color: #ff9999;
+    position: absolute;
+    top: 37%;
+    right:35%;
+}
+
+/*Footer*/
+
+footer{
+    background: #696969;
+    position:relative;
+}
+
+.mail-class p,a{
+    font-size: 1.5rem;
+    color:white;
+}
+
+.icon-class{
+    float: right;
+}
+
+.icon-class li{
+    display: inline-block;
+}
+
+.icon-class li a{
+    width: 2rem;
+}
+
+.copyright-class{
+    position: absolute;
+    bottom: 0%;
+}
+
+.copyright-class p{
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+}
