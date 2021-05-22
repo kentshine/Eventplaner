@@ -5,7 +5,7 @@ from flask_migrate import Migrate
 from flask_login import LoginManager
 
 # config
-app = Flask(import_name=__name__ , static_folder="C:\\Users\\ejinb\\PycharmProjects\\event_management_system\\event_portal_main\\static")
+app = Flask(__name__)
 app.config['SECRET_KEY'] = "mysecretkey764"
 
 ## Database setup
