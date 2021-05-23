@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" type="text/css" href="/static/styles/vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="/static/styles/vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="/static/styles/resources/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/static/styles/resources/css/queries.css">
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+        <title>BostonEdPortal || Create an Event</title>
+
+    </head>
+    <body>
+    <section class="section-form">
+            <div class="row">
+                <h2>Event Registration</h2>
+            </div>
+            <div class="row">
+                <form method="post" action="" enctype="multipart/form-data" class="contact-form">
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="eventtitle">Event Title</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="name" id="name" placeholder="Your name" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="eventdate">Event Date</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="datetime-local" name="date" id="email" placeholder="D/M/Y" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="eventlocation">Event Location</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="location" id="location" placeholder="Available Location" required>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label for="eventlocation"> Number Of Participants</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <input type="number" name="participants" id="participants" placeholder="Max. participants" required>
+                            </div>
+                         <div class="row">
+                            <div class="col span-1-of-3">
+                                <label for="eventlocation"> Upload your banner</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <input type="file" name="banner" id="banner" required>
+                            </div>
+
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>Description</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <textarea name="description" placeholder="Max. 200 Char"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="submit" value="Submit!!">
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+    </body>
+
+</html>

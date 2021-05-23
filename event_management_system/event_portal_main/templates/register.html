@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" type="text/css" href="static/styles/vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="static/styles/vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="static/styles/resources/css/style.css">
+
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+        <title>BostonEdPortal || register account</title>
+
+    </head>
+    <body>
+    {% with messages = get_flashed_messages() %}
+             {% if messages %}
+              <ul class=flashes>
+      {% for message in messages %}
+              <li>{{ message }}</li>
+     {% endfor %}
+              </ul>
+    {% endif %}
+        {% endwith %}
+        <section class="section-form">
+            <div class="row">
+                <h2>Create Account</h2>
+            </div>
+            <div class="row">
+                <form method="post" class="contact-form">
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="name" id="name" placeholder="Your name" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="useremail">Email</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="email" name="email" id="email" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="userpassword">Password</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="password" name="password" id="password" placeholder="Password" required>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label for="confirmpassword"> Confirm Password</label>
+                            </div>
+
+                            <div class="col span-2-of-3">
+                                <input type="password" name="confirmpassword" id="password" placeholder="Confirm Password" required>
+                            </div>
+
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="submit" value="Submit!!">
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+
+
+
+
+
+    </body>
+
+</html>

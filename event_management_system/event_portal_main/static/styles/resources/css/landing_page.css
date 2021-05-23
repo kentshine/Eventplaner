@@ -1,0 +1,42 @@
+
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+}
+
+
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    padding : 10px 50px;
+    color : #fff;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+}
+a{
+    text-decoration : none;
+}
+.hero
+{
+    background : url('https://i.ytimg.com/vi/R9mXtzn8meE/maxresdefault.jpg') no-repeat center center/cover;
+    height : 100vh;
+    position : relative;
+    colro : white;
+}
+
+.hero .content{
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    align-items : center;
+    height : 100%;
+    text-align : center;
+    padding : 0 20px;
+}
+
+.btn:hover{
+    background : green;
+    colro : white;
+}
