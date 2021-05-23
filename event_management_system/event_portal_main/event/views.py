@@ -29,4 +29,4 @@ def create_event():
 @events.route('/<int:events_id>')
 def event_viewer(events_id):
     choosen_event = Event.query.get_or_404(events_id)
-    return render_template('event.html',title=choosen_event.title,date=choosen_event.date,description=choosen_event.desription,location=choosen_event.location)
+    return render_template('event.html',title=choosen_event.title,date=choosen_event.date,description=choosen_event.description,location=choosen_event.location)
