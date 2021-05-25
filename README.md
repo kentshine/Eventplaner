@@ -12,7 +12,11 @@ Js - 5%
 For any support contact us
 Google Chrome is recommanded
 Project is fully deployed in Heroku 
+
+ 
+
 ```
+## HEROKU FILESYSTEM IS EPHEMERAL ,IT WILL DELETE THE IMAGE FILES AFTER SOME TIME SO RUN WEB APPLICATION IN LOCAL MACHINE FOR FULL EXPERIENCE
 
 
 
