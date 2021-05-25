@@ -18,6 +18,8 @@ blinker==1.4
 certifi==2020.12.5
 chardet==3.0.4
 click==6.7
+colorama==0.4.4
+dataclasses==0.8
 Flask==1.0.2
 Flask-Dance==0.14.0
 Flask-DebugToolbar==0.10.1
@@ -28,9 +30,9 @@ Flask-OAuth==0.12
 Flask-OAuthlib==0.9.4
 Flask-SQLAlchemy==2.3.2
 Flask-WTF==0.14.2
-gunicorn==20.1.0
 httplib2==0.11.3
 idna==2.6
+importlib-metadata==4.0.1
 itsdangerous==0.24
 Jinja2==2.10
 lazy==1.3
@@ -46,12 +48,13 @@ requests-oauthlib==0.8.0
 six==1.11.0
 SQLAlchemy==1.2.6
 SQLAlchemy-Utils==0.33.2
+typing-extensions==3.10.0.0
 urllib3==1.22
 URLObject==2.4.3
 Werkzeug==0.14.1
 wincertstore==0.2
 WTForms==2.1
-
+zipp==3.4.1
 ## CHECK THE REQUIREMENT FILE
 
 
