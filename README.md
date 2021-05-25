@@ -79,3 +79,4 @@ Instructions for setting up project
 12. pip install -r requirements.txt
 13. then cd event_portal_main
 14. at last , python app.py
+# Google Chrome is recommended 
