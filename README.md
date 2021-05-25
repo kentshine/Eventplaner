@@ -4,6 +4,7 @@ Long Description about project. This project do that. This project is awesome...
 ## Team members
 1. Edwin Moncy [https://github.com/emvk09]
 2. Augustin Benny [https://github.com/augustincbenny]
+3. Ken T. Shine [https://github.com/kentshine]
 ## Team Id
 BFH/recLVgwS831BIndPJ/2021
 ## Link to product walkthrough
