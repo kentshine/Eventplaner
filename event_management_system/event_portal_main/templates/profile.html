@@ -1,54 +1,3 @@
-<!--
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Css profile</title>
-        <link rel="stylesheet" href="static/styles/resources/css/profile2.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    </head>
-    <style>
-
-    </style>
-    <body>
-    <header>
-        <div class="card12">
-            <div>
-                <img src="https://images.app.goo.gl/MwgtEjwMF1C36WKg9">
-                <h1>Sasi<br>
-                <span>Student</span>
-                </h1>
-                <p>Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.</p>
-
-                <ul>
-                    <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
-                    <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                  </ul>
-
-            </div>
-        </div>
-    </header>
-        <section>
-        <div class="card">
-                  <div class="card-header">
-                    Featured
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-        </div>
-        </section>
-
-    </body>
-</html>
-!-->
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -60,23 +9,50 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Liberty University || My Account</title>
 
 </head>
 <body>
-<div class="card">
-  <div class="card-header">
-    Featured
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
+<nav class="navbar navbar-dark bg-dark">
+    <a href="{{ url_for('core.home') }}" class="navbar-brand">Liberty University</a>
+</nav>
+
+
+<div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Username : {{ current_user.username }}</h1>
+          <p class="lead">ID : STUDENT</p>
+        </div>
 </div>
 
-   <div class="jumbotron">
-     
-   </div>
+    <div class="jumbotron">
+        <h1>Events Created !!</h1>
+    </div>
+
+    {% for event in events.items %}
+
+   <div class="card  text-black bg-warning mb-3">
+    <h5 class="card-header">Events Created </h5>
+    <div class="card-body">
+      <h5 class="card-title">Event Name : {{ event.title }}</h5>
+      <p class="card-text">Date : {{ event.date }}</p>
+      <a href="{{ url_for('events.view_event',event_id=event.id) }}" class="btn btn-primary">Go to Event Page</a>
+    </div>
+  </div>
+{% endfor %}
+
+<div class="jumbotron">
+    <h1>Events Registered</h1>
+</div>
+{% for i in events_registered %}
+   <div class="card text-white bg-danger mb-3">
+    <h5 class="card-header">Events Registered </h5>
+    <div class="card-body">
+      <h5 class="card-title">Event Name : {{ i.title }}</h5>
+      <p class="card-text">Date : {{ i.date }}</p>
+      <a href="{{ url_for('events.view_event',event_id=i.id) }}" class="btn btn-primary">Go to Event Page</a>
+    </div>
+  </div>
+{% endfor %}
 </body>
 </html>

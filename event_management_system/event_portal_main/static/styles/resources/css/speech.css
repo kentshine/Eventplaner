@@ -7,10 +7,6 @@
     overflow-x: hidden;
 
 }
- 
-html{
-    font-size: 62.5%;
-}
 
 /*Initial assigned properties*/
 
@@ -27,23 +23,23 @@ html,body{
 }
 
 h1{
-    font-size: 4rem;
+    font-size: 50px;
     font-family: font-family: 'Source Sans Pro', sans-serif;
 }
 
 h2{
-    font-size: 7rem;
+    font-size: 50px;
     padding: 5rem 0rem;
 }
 
 h3{
-    font-size: 7rem;
+    font-size: 50px;
     padding: 5rem 0rem;
     margin-left: 260px;
 }
 
 h4{
-    font-size: 1.5rem;
+    font-size: 50px;
 }
 
 a{
@@ -54,26 +50,30 @@ a{
 }
 
 p{
-    font-size: 2.5rem;
+    font-size: 50px;
 }   
 
 /*Navigation bar details*/
 
 header{
-    background-image = url(img/speech.png);
     background-position: center;
     background-size: cover;
-    height: 55rem;
+    height: 50em;
     overflow:hidden;
 }
 
 
 .liberty-logo{
-    width: 20rem;
+    width: 15rem;
     margin-left: 10rem;
     margin-top: 1rem;
+
 }
 
+nav{
+background : #fa9505;
+height : 8em;
+}
 .nav-class{
     float: right;
     margin-right: .2rem;
@@ -90,7 +90,7 @@ header{
 header h1{
     text-align: center;
     margin-left: -60rem;
-    margin-top: 4   rem;
+    margin-top: 5rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     font-size: 20rem;
@@ -99,6 +99,9 @@ header h1{
 }
 
 /*Event details*/
+.detail-class{
+    background-color : lightpink;
+}
 
 .detail-class h2{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -212,6 +215,9 @@ section {
     padding: 1%;
 }
 
+.section-form{
+    background : lightblue;
+}
 
 .content {
  display : flex;
@@ -237,7 +243,13 @@ section {
     border: none;
     border-radius: 5px;
 }
-
+.user-registered{
+    background-color:lightyellow;
+}
 .row h3{
     font-size : 50px;
+}
+
+h1,h2,h3,h4{
+    overflow:hidden;
 }

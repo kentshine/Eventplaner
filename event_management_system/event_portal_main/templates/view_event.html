@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../static/styles/resources/css/event_normalize.css">
     <link rel="stylesheet" type="text/css" href="../static/styles/resources/css/event_grid.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
-    <title>LibertyEdPortal | Events | Speech Competition</title>
+    <title>LibertyEdPortal | Events | {{ event.title }}</title>
     <link rel="stylesheet" href="../static/styles/resources/css/speech.css">
         <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -18,32 +18,26 @@
 
                <!--Title and Navigation bar-->
 
-    <Header>
+    <Header style="background-image : url('{{ url_for('static',filename='event_banner/'+event.banner) }}')")>
         <nav>
-            <img src="../static/styles/resources/img/PngItem_833749.png" alt="A logo" class="liberty-logo">
+            <a href="{{ url_for('core.home') }}"><img src="../static/styles/resources/img/liberty_logo.png" alt="A logo" class="liberty-logo"></a>
             <ul class="nav-class">
-                <li><a class="btn btn-primary" href="index.html">About</a></li>
-                <li><a class="btn btn-danger" href="index.html">Delete Post</a></li>
-                <li><a class="btn btn-info" href="#">Contact Us</a></li>
+                {% if event.organiser == current_user %}
+                <li><a class="btn btn-danger" href="{{ url_for('events.delete_event',event_id=event.id) }}">Delete Post</a></li>
+                {% endif %}
+                <li><a class="btn btn-info" href="#">Students Registered : {{ number_of_participants }}</a></li>
             </ul>
             <div class="clearfix"></div>
         </nav>
-        <img src="{{ url_for('static',filename='event_banner/'+event.banner) }}" alt="No image found 😔😔">
     </Header>
-
-                    <!--Event Details-->    
-
-    <section>
         <div class="detail-class">
             <h2>{{ event.title }}</h2>
             <h4>Date: {{ event.date }} </h4>
-            <h4>Time: {{ event.time }}</h4>
             <h4>Location: {{ event.location }}</h4>
+            <h4>Conducted By : {{ event.organiser.username }}</h4>
             <p> {{ event.description }}</p>
         </div>
-
                      <!--Event Outcomes-->
-
                      <section class="section-form">
                         <div class="my-row">
                         </div>
@@ -66,40 +60,43 @@
                                         <input type="email" name="email" id="email" placeholder="Mail id" required>
                                     </div>
                                 !-->
+                                {% if number_of_participants >= event.participants %}
+                                    <h1>You can't register , participant limit is reached</h1>
+                                {% elif today >= event.date %}
+                                    <h1>This event is already finished !!</h1>
+                                {% else %}
                                 <input type="submit" class="rsvp-btn" href="#" value="GET RSVP">
+                                {% endif %}
                             </form>
-            
                         </div>
-                    </section>
-
-    <table class="table table-warning table-striped">
+                         <section>
+                                  <div class="users-registered">
+                                      {% if today >= event.date %}
+                                      <h1 align="center">These People Attended This Event</h1>
+                                      {% else %}
+                                      <h1 align="center">These People Are Coming For This Event</h1>
+                                      {% endif %}
+        <table class="table table-warning table-striped">
     <thead>
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">Student ID</th>
       <th scope="col">Name</th>
       <th scope="col">Email</th>
 
     </tr>
   </thead>
   <tbody>
+  {% for student in event.coming %}
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-
+      <th scope="row">{{ student.id }}</th>
+      <td>{{ student.username }}</td>
+      <td>{{ student.email }}</td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry the Bird</td>
-        <td>Thaikkatill</td>
-    </tr>
-  </tbody>
+    {% endfor %}
    </table>
+    </div>
+     </section>
+
+
 </body>
 </html>

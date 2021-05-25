@@ -3,7 +3,7 @@ from flask_login import login_user,current_user,logout_user,login_required
 from event_portal_main import db
 from werkzeug.security import generate_password_hash,check_password_hash
 from event_portal_main.users.forms import RegistrationForm, LoginForm
-from event_portal_main.models import User
+from event_portal_main.models import User,Event
 
 
 
@@ -27,14 +27,26 @@ def register():
         password = request.form.get('password')
         confirm_password = request.form.get('confirmpassword')
 
-        if password == confirm_password:
-            user = User(email = email , username = username , password = password)
-            db.session.add(user)
-            db.session.commit()
-            flash('Thanks for registering! Now you can login!')
-            return redirect(url_for('users.login'))
-        elif password != confirm_password:
-            flash("Passwords should match")
+        if User.query.filter_by(username=username).first() is not None:
+            flash("Account with this username already exists !!")
+            ##request.form['username'] = ""
+            ##request.form['email'] = " "
+            ##request.form['password'] = " "
+            ##request.form['confirm_password'] = " "
+            return redirect(url_for("users.register"))
+        elif User.query.filter_by(email=email).first() is not None:
+            flash("This email is already registered !!")
+            return redirect(url_for("users.register"))
+        elif User.query.filter_by(username=username).first() is None:
+            if password == confirm_password:
+                user = User(email = email , username = username , password = password)
+                db.session.add(user)
+                db.session.commit()
+                flash('Thanks for registering! Now you can login!')
+                print(user)
+                return redirect(url_for('users.login'))
+            elif password != confirm_password:
+                flash("Passwords should match")
 
     return render_template('register.html')
 
@@ -51,10 +63,10 @@ def login():
 
     '''
     if request.method == "POST":
-        email = request.form.get('email')
+        username = request.form.get('username')
         password = request.form.get('password')
 
-        user = User.query.filter_by(email=email).first()
+        user = User.query.filter_by(username=username).first()
 
         if user is None:
             flash("Username or password is incorrect")
@@ -84,6 +96,18 @@ def logout():
     return redirect(url_for("core.index"))
 
 
-@users.route('/account')
+@users.route('/account/',methods=["GET","POST"])
+@login_required
 def account():
-    return render_template('profile.html')
+    page = request.args.get('page',1,type=int)
+    user = User.query.filter_by(username=current_user.username).first_or_404()
+    events_created = Event.query.filter_by(organiser=user).order_by(Event.date.asc()).paginate(page=page,per_page=10)
+    all_events = Event.query.all()
+    events_registered = []
+
+    for i in all_events:
+        for j in i.coming:
+            if j.username == current_user.username:
+                events_registered.append(i)
+
+    return render_template("profile.html",events=events_created,user=user,events_registered=events_registered)

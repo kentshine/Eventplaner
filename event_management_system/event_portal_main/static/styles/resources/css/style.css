@@ -216,11 +216,10 @@ header {
 }
 
 .logo {
-    height: 60px;
+    height: 100px;
     width: auto;
     float: left;
     margin-top: 20px;
-    margin-left: -120px;
 }
 
 .logo-black {
@@ -542,6 +541,7 @@ cite img {
 input[type=text],
 input[type=email],
 input[type=password],
+input[type=username],
 select,
 textarea {
     width: 100%;
