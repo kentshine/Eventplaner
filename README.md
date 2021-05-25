@@ -10,6 +10,7 @@ CSS - 30%
 Flask - 25%
 Js - 5%
 For any support contact us
+Google Chrome is recommanded
 Project is fully deployed in Heroku 
 ```
 
