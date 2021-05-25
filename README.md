@@ -1,18 +1,59 @@
-# Eventplaner for your college
+# Eventplaner 
+```
+Our project is setting up a college event portal,so we created an event portal for college(Liberty University) by putting our maximum affort.
+The design and the style format is top-notch.
+Event portal is less than 30mb so it's very fast and accurate.(Internet speed matters)
+The setup we craeted is very user friendly so creating and registering an event
+You will receive a mail for verification process,don't forget password
+HTML-30%
+CSS - 30%
+Flask - 25%
+Js - 5%
+For any support contact us
+Project is fully deployed in Heroku 
+```
 
-Long Description about project. This project do that. This project is awesome...
+
+
+
+
 ## Team members
-1. Edwin Moncy [https://github.com/emvk09]
-2. Augustin Benny [https://github.com/augustincbenny]
-3. Ken T. Shine [https://github.com/kentshine]
+1. Ken T. Shine [https://github.com/kentshine]
+2. Edwin Moncy [https://github.com/emvk09]
+3. Augustin Benny [https://github.com/augustincbenny]
+
+
+
 ## Team Id
 BFH/recLVgwS831BIndPJ/2021
+
 ## Link to product walkthrough
 [https://drive.google.com/drive/folders/1wGQv4O5g7NI0RxHA8YMgmcuNCI274tBy?usp=sharing]
+
+
 ## How it Works ?
+```
+1.Register an account
+. Create an account by using mail id
+. Log into your account
+2.Create an event
+. Click create an event
+. Fill out the form and submit
+3.Register for an event
+. Check the upcomming events
+. Request for RSVP
+. Verification mail will send to your gmail
+. Accept it for the verification and registeration
+4.Find user id
+. Click my account
+5.Always logout after use
+6.Internal Error also defined - 404 with a hand burger
+7.Google chrome is highly recommanded for best experience
+```
 
 
 ## Libraries used
+```
 alembic==0.9.9
 blinker==1.4
 certifi==2020.12.5
@@ -55,11 +96,12 @@ Werkzeug==0.14.1
 wincertstore==0.2
 WTForms==2.1
 zipp==3.4.1
+```
 ## CHECK THE REQUIREMENT FILE
 
 
 
-Instructions for setting up project
+
 ## How to Run
 1. make new environment , with python version=3.6
 2. install requirements.txt file
