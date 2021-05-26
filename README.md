@@ -33,7 +33,8 @@ Project is fully deployed in Heroku
 BFH/recLVgwS831BIndPJ/2021
 
 ## Link to product walkthrough
-[https://loom.com/share/folder/7ace3e5cbbcb48598f3684aed1897d57]
+Loom : [https://loom.com/share/folder/7ace3e5cbbcb48598f3684aed1897d57]
+Drive : [https://drive.google.com/drive/folders/1wGQv4O5g7NI0RxHA8YMgmcuNCI274tBy?usp=sharing]
 
 
 ## How it Works ?
