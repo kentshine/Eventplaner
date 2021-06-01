@@ -3,7 +3,7 @@
 Our project is setting up a college event portal,so we created an event portal for college(Liberty University) by putting our maximum affort.
 The design and the style format is top-notch.
 Event portal is less than 30mb so it's very fast and accurate.(Internet speed matters)
-The setup we craeted is very user friendly so creating and registering an event
+The setup we created is very user friendly 
 You will receive a mail for verification process,don't forget password
 HTML-30%
 CSS - 30%
