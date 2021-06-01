@@ -23,7 +23,8 @@ Project is fully deployed in Heroku
 
 
 ## Team members
-1. @Ken T. Shine [https://github.com/kentshine]
+
+1.Ken T. Shine [https://github.com/kentshine]
 2. Edwin Moncy [https://github.com/emvk09]
 3. Augustin Benny [https://github.com/augustincbenny]
 
