@@ -26,7 +26,7 @@ Project is fully deployed in Heroku
 ```
 1.Ken T. Shine [https://github.com/kentshine]
 2.Edwin Moncy [https://github.com/emvk09]
-3. Augustin Benny [https://github.com/augustincbenny]
+3.Augustin Benny [https://github.com/augustincbenny]
 ```
 
 
